@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Wk4_Android_Project_Design</string>
+    <string name="welcome">Welcome!</string>
+    <string name="what_to_do">What do you want to do?</string>
+    <string name="retrieve_account">Forgot account?</string>
+    <string name="forgot_account">Forgot Account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="enter_your_retrieval_email">Enter your Retrieval Email</string>
+</resources>
