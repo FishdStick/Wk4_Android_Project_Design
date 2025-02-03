@@ -8,12 +8,14 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/mainWelcomeTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/welcome"
-        android:textSize="34sp"
-        tools:layout_editor_absoluteX="130dp"
-        tools:layout_editor_absoluteY="225dp" />
+        android:layout_marginTop="265dp"
+        android:text="@string/welcome_to_mainscreen"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

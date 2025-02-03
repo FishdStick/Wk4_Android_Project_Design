@@ -23,7 +23,7 @@ class WelcomeScreen : AppCompatActivity() {
         val goToSignUpButton = findViewById<View>(R.id.signUpBtn) as Button
         goToSignUpButton.setOnClickListener { goToRegistrationScreen() }
 
-        val goToLoginButton = findViewById<View>(R.id.loginBtn) as Button
+        val goToLoginButton = findViewById<View>(R.id.welcomeLoginBtn) as Button
         goToLoginButton.setOnClickListener { goToLoginScreen() }
 
         val goToAccRetrievalButton = findViewById<View>(R.id.forgotAccBtn) as Button

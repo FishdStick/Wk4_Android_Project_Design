@@ -8,11 +8,62 @@
     tools:context=".LoginScreen">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/loginTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/login"
         android:textSize="34sp"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="240dp" />'
+        app:layout_constraintBottom_toTopOf="@+id/loginEmailTV"
+        app:layout_constraintStart_toEndOf="@+id/loginEmailTV" />
+
+    <EditText
+        android:id="@+id/loginEmailET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/loginEmailTV"
+        app:layout_constraintTop_toBottomOf="@+id/loginEmailTV" />
+
+    <TextView
+        android:id="@+id/loginEmailTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="254dp"
+        android:text="@string/email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/loginPasswordTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:text="@string/password"
+        app:layout_constraintStart_toStartOf="@+id/loginEmailET"
+        app:layout_constraintTop_toBottomOf="@+id/loginEmailET" />
+
+    <EditText
+        android:id="@+id/loginPasswordET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@+id/loginPasswordTV"
+        app:layout_constraintTop_toBottomOf="@+id/loginPasswordTV" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="Login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginPasswordET" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
