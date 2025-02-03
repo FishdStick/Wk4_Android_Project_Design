@@ -22,31 +22,36 @@ class LoginScreen : AppCompatActivity() {
             insets
         }
 
-
         val loginButton = findViewById<View>(R.id.loginBtn) as Button
         loginButton.setOnClickListener { goToMainScreen() }
 
     }
 
     private fun goToMainScreen() {
-        val getEmailText = findViewById<EditText>(R.id.loginEmailET);
-        val getPasswordText = findViewById<EditText>(R.id.loginPasswordET);
-        var email = getEmailText.text.toString();
-        var password = getPasswordText.text.toString();
-        var message = "";
-        val toast = Toast.makeText(this, message, Toast.LENGTH_SHORT);
 
-        if (email == "test@gmail.com" && password == "1234") {
+//        Logic for login validation
 
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+//        val getEmailText = findViewById<EditText>(R.id.loginEmailET);
+//        val getPasswordText = findViewById<EditText>(R.id.loginPasswordET);
+//        var email = getEmailText.text.toString();
+//        var password = getPasswordText.text.toString();
+//        var message = "";
+//        val toast = Toast.makeText(this, message, Toast.LENGTH_SHORT);
+//
+//       if (email == "test@gmail.com" && password == "1234") {
+//
+//            val intent = Intent(this, MainActivity::class.java)
+//            startActivity(intent)
+//
+//        } else {
+//
+//            message = "Wrong Email or Password";
+//            toast.show();
+//
+//        }
 
-        } else {
-
-            message = "Wrong Email or Password";
-            toast.show();
-
-        }
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
 
     }
 
