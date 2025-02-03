@@ -5,60 +5,66 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00241B"
     tools:context=".WelcomeScreen">
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="22dp"
-        android:text="@string/welcome"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintStart_toStartOf="@+id/textView4" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="14dp"
-        android:text="@string/what_to_do"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/signUpBtn"
-        app:layout_constraintEnd_toEndOf="@+id/signUpBtn"
-        app:layout_constraintStart_toEndOf="@+id/signUpBtn" />
 
     <Button
         android:id="@+id/signUpBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="11dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="7dp"
+        android:background="@color/eggplant"
         android:text="@string/sign_up"
-        app:layout_constraintBaseline_toBaselineOf="@+id/welcomeLoginBtn"
+        android:textColor="@color/ash_gray"
+        app:layout_constraintBottom_toTopOf="@+id/forgotAccBtn"
         app:layout_constraintEnd_toStartOf="@+id/welcomeLoginBtn"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/welcomeLoginBtn"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="292dp"
-        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="7dp"
+        android:background="@color/eggplant"
         android:text="@string/login"
+        android:textColor="@color/ash_gray"
+        android:textColorLink="#2F2626"
+        app:layout_constraintBottom_toTopOf="@+id/forgotAccBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/signUpBtn"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <Button
         android:id="@+id/forgotAccBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="21dp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="131dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="211dp"
         android:text="@string/retrieve_account"
-        app:layout_constraintEnd_toEndOf="@+id/welcomeLoginBtn"
-        app:layout_constraintTop_toBottomOf="@+id/signUpBtn" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/ash_gray"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeLoginBtn" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/welcomeLoginBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_with_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

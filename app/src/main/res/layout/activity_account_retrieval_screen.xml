@@ -5,49 +5,78 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark_green"
     tools:context=".AccountRetrievalScreen">
 
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="167dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="91dp"
+        android:layout_marginBottom="9dp"
+        app:layout_constraintBottom_toTopOf="@+id/AccountRetrievalTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_with_text" />
+
+    <!-- TV Account Retrieval -->
     <TextView
         android:id="@+id/AccountRetrievalTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="67dp"
+        android:layout_marginBottom="17dp"
+        android:paddingBottom="10dp"
         android:text="Account Retrieval"
+        android:textAlignment="center"
+        android:textColor="@color/ash_gray"
         android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/actRetEnterEmailTV"
+        app:layout_constraintStart_toStartOf="@+id/actRetEnterEmailTV"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
+    <!-- TV Email Address -->
     <TextView
         android:id="@+id/actRetEnterEmailTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginBottom="11dp"
         android:text="@string/enter_your_retrieval_email"
+        android:textColor="@color/ash_gray"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintBottom_toTopOf="@+id/actRetEmailAddressET"
+        app:layout_constraintStart_toStartOf="@+id/actRetEmailAddressET"
+        app:layout_constraintTop_toBottomOf="@+id/AccountRetrievalTV" />
 
-    <Button
-        android:id="@+id/accRetrievalButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="26dp"
-        android:text="Retrieve Account"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
-
+    <!-- ET Email Address -->
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="248dp"
+        android:id="@+id/actRetEmailAddressET"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="17dp"
+        android:backgroundTint="@color/ash_gray"
         android:ems="10"
         android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/accRetrievalButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/actRetEnterEmailTV" />
+
+    <!-- Button Retrieve Account  -->
+    <Button
+        android:id="@+id/accRetrievalButton"
+        android:layout_width="138dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="237dp"
+        android:background="@color/eggplant"
+        android:text="Retrieve Account"
+        android:textColor="@color/ash_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actRetEmailAddressET" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

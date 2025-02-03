@@ -5,17 +5,62 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark_green"
     tools:context=".MainActivity">
 
+    <!--Welcome Text-->
     <TextView
         android:id="@+id/mainWelcomeTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="265dp"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="10dp"
         android:text="@string/welcome_to_mainscreen"
+        android:textAlignment="center"
+        android:textColor="@color/ash_gray"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="110dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="167dp"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/mainWelcomeTV"
+        app:layout_constraintEnd_toEndOf="@+id/mainWelcomeTV"
+        app:layout_constraintStart_toStartOf="@+id/mainWelcomeTV"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_without_text" />
+
+    <!-- PFP -->
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="159dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainWelcomeTV"
+        app:srcCompat="@drawable/pfp" />
+
+    <!-- Hello -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="262dp"
+        android:text="Hi, I'm Michael!"
+        android:textColor="@color/ash_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

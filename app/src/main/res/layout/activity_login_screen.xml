@@ -5,65 +5,97 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark_green"
     tools:context=".LoginScreen">
 
     <TextView
         android:id="@+id/loginTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="13dp"
         android:text="@string/login"
-        android:textSize="34sp"
+        android:textColor="@color/ash_gray"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/loginEmailTV"
-        app:layout_constraintStart_toEndOf="@+id/loginEmailTV" />
-
-    <EditText
-        android:id="@+id/loginEmailET"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        app:layout_constraintStart_toStartOf="@+id/loginEmailTV"
-        app:layout_constraintTop_toBottomOf="@+id/loginEmailTV" />
-
-    <TextView
-        android:id="@+id/loginEmailTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="254dp"
-        android:text="@string/email"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <TextView
         android:id="@+id/loginPasswordTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
+        android:layout_marginBottom="1dp"
         android:text="@string/password"
+        android:textColor="@color/ash_gray"
+        app:layout_constraintBottom_toTopOf="@+id/loginPasswordET"
         app:layout_constraintStart_toStartOf="@+id/loginEmailET"
         app:layout_constraintTop_toBottomOf="@+id/loginEmailET" />
 
-    <EditText
-        android:id="@+id/loginPasswordET"
+    <Button
+        android:id="@+id/loginBtn"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="194dp"
+        android:background="@color/eggplant"
+        android:text="Login"
+        android:textColor="@color/ash_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginPasswordET" />
+
+    <EditText
+        android:id="@+id/loginPasswordET"
+        style="@android:style/Widget.Material.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/ash_gray"
         android:ems="10"
         android:inputType="textPassword"
+        android:textColor="@color/ash_gray"
+        app:layout_constraintBottom_toTopOf="@+id/loginBtn"
         app:layout_constraintStart_toStartOf="@+id/loginPasswordTV"
         app:layout_constraintTop_toBottomOf="@+id/loginPasswordTV" />
 
-    <Button
-        android:id="@+id/loginBtn"
+    <TextView
+        android:id="@+id/loginEmailTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Login"
+        android:layout_marginBottom="1dp"
+        android:text="@string/email"
+        android:textColor="@color/ash_gray"
+        app:layout_constraintBottom_toTopOf="@+id/loginEmailET"
+        app:layout_constraintStart_toStartOf="@+id/loginTV"
+        app:layout_constraintTop_toBottomOf="@+id/loginTV" />
+
+    <EditText
+        android:id="@+id/loginEmailET"
+        style="@android:style/Widget.Material.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="@color/ash_gray"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="@color/ash_gray"
+        app:layout_constraintBottom_toTopOf="@+id/loginPasswordTV"
+        app:layout_constraintStart_toStartOf="@+id/loginEmailTV"
+        app:layout_constraintTop_toBottomOf="@+id/loginEmailTV" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="167dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="91dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/loginTV"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.557"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginPasswordET" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_with_text" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
