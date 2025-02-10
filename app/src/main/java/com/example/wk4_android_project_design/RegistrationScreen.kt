@@ -35,7 +35,7 @@ class RegistrationScreen : AppCompatActivity() {
         }
 
         registerSignUpBtn = findViewById(R.id.registerSignUpBtn)
-        registerSignUpBtn.setOnClickListener { registerSuccess() }
+        registerSignUpBtn.setOnClickListener { validateRegistrations() }
 
         registerBackBtn = findViewById(R.id.registerBackBtn)
         registerBackBtn.setOnClickListener { goToWelcomeScreen() }
@@ -61,6 +61,10 @@ class RegistrationScreen : AppCompatActivity() {
 
     }
 
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+
     //TODO
     // Validation for all text fields
     // Must follow the allowed characters
@@ -72,29 +76,34 @@ class RegistrationScreen : AppCompatActivity() {
         var email = EmailET.text.toString().trim()
         var password = passwordET.text.toString().trim()
 
+
         when {
-            email == testEmail && password == testPassword -> {
-                goToMainScreen()
-                finish()
+            TextUtils.isEmpty(firstName) &&
+                    TextUtils.isEmpty(age) &&
+                    TextUtils.isEmpty(username) &&
+                    TextUtils.isEmpty(email) &&
+                    TextUtils.isEmpty(password)  -> {
+                showToast("Complete All Required Fields!")
+                return
             }
             !Patterns.EMAIL_ADDRESS.matcher(email).matches() -> {
                 showToast("Enter a valid email!")
                 return
             }
-            TextUtils.isEmpty(email) -> {
-                showToast("Email is required!")
-                return
-            }
-            TextUtils.isEmpty(password) -> {
-                showToast("Password is required!")
-                return
+            !TextUtils.isEmpty(firstName) &&
+                    !TextUtils.isEmpty(age) &&
+                    !TextUtils.isEmpty(username) &&
+                    !TextUtils.isEmpty(email) &&
+                    !TextUtils.isEmpty(password)  -> {
+                showToast("Registration Successful!")
+                registerSuccess()
+                finish()
             }
             else -> {
-                showToast("Incorrect Email or Password!")
+                showToast("Complete All Required Fields!")
                 return
+
             }
         }
     }
-
-
 }
