@@ -6,6 +6,8 @@ import android.view.View
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -19,5 +21,16 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val mainLogoutBtn = findViewById<View>(R.id.mainLogoutBtn) as Button
+        mainLogoutBtn.setOnClickListener { logout() }
+
     }
+
+    private fun logout(){
+        val intent = Intent(this, WelcomeScreen::class.java)
+        startActivity(intent)
+    }
+
+
 }

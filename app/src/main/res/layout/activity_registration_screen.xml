@@ -8,7 +8,6 @@
     android:background="@color/dark_green"
     tools:context=".RegistrationScreen">
 
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="136dp"
@@ -58,39 +57,66 @@
         android:layout_marginBottom="25dp"
         android:backgroundTint="@color/ash_gray"
         android:ems="10"
-        android:inputType="text"
+        android:inputType="textPersonName"
         android:textColor="@color/ash_gray"
         app:layout_constraintBottom_toBottomOf="@+id/usernameTV"
-        app:layout_constraintEnd_toStartOf="@+id/lastNameET"
+        app:layout_constraintEnd_toStartOf="@+id/ageET"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/firstNameTV" />
 
     <!-- TV Last Name -->
+<!--    <TextView-->
+<!--        android:id="@+id/lastNameTV"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="2dp"-->
+<!--        android:text="Last Name"-->
+<!--        android:textColor="@color/ash_gray"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/firstNameET"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/lastNameET" />-->
+
+    <!-- ET Last Name -->
+<!--    <EditText-->
+<!--        android:id="@+id/lastNameET"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginEnd="49dp"-->
+<!--        android:layout_marginBottom="2dp"-->
+<!--        android:backgroundTint="@color/ash_gray"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="text"-->
+<!--        android:textColor="@color/ash_gray"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/firstNameET"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/firstNameET"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/lastNameTV" />-->
+
+    <!-- TV Age -->
     <TextView
-        android:id="@+id/lastNameTV"
+        android:id="@+id/ageTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="2dp"
-        android:text="Last Name"
+        android:text="Age"
         android:textColor="@color/ash_gray"
         app:layout_constraintBottom_toTopOf="@+id/firstNameET"
-        app:layout_constraintStart_toStartOf="@+id/lastNameET" />
+        app:layout_constraintStart_toStartOf="@+id/ageET" />
 
     <!-- ET Last Name -->
     <EditText
-        android:id="@+id/lastNameET"
+        android:id="@+id/ageET"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="49dp"
         android:layout_marginBottom="2dp"
         android:backgroundTint="@color/ash_gray"
         android:ems="10"
-        android:inputType="text"
+        android:inputType="number"
         android:textColor="@color/ash_gray"
         app:layout_constraintBottom_toBottomOf="@+id/firstNameET"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/firstNameET"
-        app:layout_constraintTop_toBottomOf="@+id/lastNameTV" />
+        app:layout_constraintTop_toBottomOf="@+id/ageTV" />
 
     <!-- TV Username -->
     <TextView
@@ -196,5 +222,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/EmailET" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/registerBackBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginBottom="38dp"
+        android:clickable="true"
+        app:backgroundTint="@color/dark_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/white_back_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
